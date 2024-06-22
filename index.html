@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğum Haritası Hesaplama</title>
+</head>
+<body>
+    <h1>Doğum Haritası Hesaplama</h1>
+    <form action="/report" method="POST">
+        <label for="name">Ad:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="year">Yıl:</label>
+        <input type="text" id="year" name="year" required><br><br>
+
+        <label for="month">Ay:</label>
+        <input type="text" id="month" name="month" required><br><br>
+
+        <label for="day">Gün:</label>
+        <input type="text" id="day" name="day" required><br><br>
+
+        <label for="hour">Saat:</label>
+        <input type="text" id="hour" name="hour" required><br><br>
+
+        <label for="minute">Dakika:</label>
+        <input type="text" id="minute" name="minute" required><br><br>
+
+        <label for="city">Şehir:</label>
+        <input type="text" id="city" name="city" required><br><br>
+
+        <label for="nation">Ülke:</label>
+        <input type="text" id="nation" name="nation" required><br><br>
+
+        <input type="submit" value="Hesapla">
+    </form>
+</body>
+</html>
