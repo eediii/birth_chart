@@ -22,10 +22,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Deploy to Heroku
+    - name: Add Heroku remote and deploy
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
-        heroku auth:token
+        echo "machine api.heroku.com login ${{ secrets.HEROKU_API_KEY }}" > ~/.netrc
+        echo "machine git.heroku.com login ${{ secrets.HEROKU_API_KEY }}" >> ~/.netrc
         git remote add heroku https://git.heroku.com/birthchart.git
         git push heroku main
