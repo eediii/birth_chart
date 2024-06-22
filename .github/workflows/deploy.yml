@@ -26,7 +26,7 @@ jobs:
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
-        echo "machine api.heroku.com login $HEROKU_API_KEY" > ~/.netrc
-        echo "machine git.heroku.com login $HEROKU_API_KEY" >> ~/.netrc
+        echo "machine api.heroku.com login $HEROKU_API_KEY password $HEROKU_API_KEY" > ~/.netrc
+        echo "machine git.heroku.com login heroku password $HEROKU_API_KEY" >> ~/.netrc
         git remote add heroku https://git.heroku.com/birthchart.git
         git push heroku main
